@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2010 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Original slides: Marcin Wichary (mwichary@google.com)
+  Modifications: Ernest Delgado (ernestd@google.com)
+                 Alex Russell (slightlyoff@chromium.org)
+
+  landslide modifications: Adam Zapletal (adamzap@gmail.com)
+                           Nicolas Perriault (nperriault@gmail.com)
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>SEO &amp; i18n</title>
+    <!-- Styles -->
+    <link href='http://fonts.googleapis.com/css?family=Monda' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Racing+Sans+One' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" media="print" href="theme/css/print.css">
+    <link rel="stylesheet" media="screen, projection" href="theme/css/screen.css">
+    
+    
+      
+      <link rel="stylesheet" href="theme/css/screen.css">
+      
+    
+    <!-- /Styles -->
+    <!-- Javascripts -->
+    
+    <script type="text/javascript" src="theme/js/slides.js"></script>
+    
+    
+      
+      <script type="text/javascript" src="theme/js/jquery.min.js"></script>
+      
+    
+    <!-- /Javascripts -->
+</head>
+<body>
+  <div id="blank"></div>
+  <div class="presentation">
+    <div id="current_presenter_notes">
+      <div id="presenter_note"></div>
+    </div>
+    <div class="slides">
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>SEO &amp; i18n</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              1/26
+            </aside>
+            <img class="logo" src="theme/img/yycjs-logo.png">
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Our Presenters</h2></header>
+            
+            
+            <section><h2>David Luecke</h2>
+<ul>
+<li>GitHub: <a href="http://daffl.github.com">daffl.github.com</a>, Twitter: <a href="http://twitter.com/daffl">@daffl</a></li>
+</ul>
+<h2>Eric Kryski</h2>
+<ul>
+<li>GitHub: <a href="http://ekryski.github.com">ekryski.github.com</a>, Twitter: <a href="http://twitter.com/ekryski">@ekryski</a></li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              2/26
+            </aside>
+            <img class="logo" src="theme/img/yycjs-logo.png">
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Our Sponsors</h2></header>
+            
+            
+            <section><h2>Assembly Co-working Space</h2>
+<p><img alt="Assembly" src="images/sponsors/assembly_logo.png" /></p>
+<h2>PetroFeed</h2>
+<p><img alt="PetroFeed" src="images/sponsors/pf-logo.png" /></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              3/26
+            </aside>
+            <img class="logo" src="theme/img/yycjs-logo.png">
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Our Sponsors</h2></header>
+            
+            
+            <section><h2>Village Brewery</h2>
+<p><img alt="Village Brewery" src="images/sponsors/village_brewery_logo_inverted.png" /></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              4/26
+            </aside>
+            <img class="logo" src="theme/img/yycjs-logo.png">
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Last Month</h2></header>
+            
+            
+            <section><h1><a href="http://yycjs.com/module-loading-generators/#slide1">Module Loading &amp; Generators</a></h1>
+<ul>
+<li>Modules<ul>
+<li>Module Types (CommonJS, AMD, ES6)</li>
+<li>RequireJS</li>
+<li>Component</li>
+<li>Browserify</li>
+</ul>
+</li>
+<li>Generators<ul>
+<li>Yeoman</li>
+<li>Mimosa</li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              5/26
+            </aside>
+            <img class="logo" src="theme/img/yycjs-logo.png">
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>SEO</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              6/26
+            </aside>
+            <img class="logo" src="theme/img/yycjs-logo.png">
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Search Engine Optimzation</h2></header>
+            
+            
+            <section><p><img alt="SEO Sorcery" src="images/seo-sorcery.jpg" /></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              7/26
+            </aside>
+            <img class="logo" src="theme/img/yycjs-logo.png">
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Different Strokes</h2></header>
+            
+            
+            <section><p>Different search engines archive and rank differently and...</p>
+<p>It's constantly evolving!</p>
+<p><img alt="Blindfolded" src="images/searching-blindfolded-man.jpg" /></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              8/26
+            </aside>
+            <img class="logo" src="theme/img/yycjs-logo.png">
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Typical SEO Protips</h2></header>
+            
+            
+            <section><ul>
+<li>Need a good title description</li>
+<li>Get links back from large reputable sources</li>
+<li>Have a clean link structure</li>
+<li>Fill in <code>&lt;img&gt;</code> alt text, <code>&lt;a&gt;</code> title text, <code>&lt;meta&gt;</code> tags</li>
+<li>Have rich diverse content. Excessive repitition == bad. No content == bad.</li>
+<li>Don't abuse keywors. Use nice phrases.</li>
+<li>Spit your message different ways on different pages</li>
+<li>Leverage social media</li>
+<li>Put in an XML Sitemap</li>
+<li>Get Traffic!!</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              9/26
+            </aside>
+            <img class="logo" src="theme/img/yycjs-logo.png">
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Great. What about JS apps?</h2></header>
+            
+            
+            <section><p>Crawlers don't do JS... <a href="http://moz.com/ugc/can-google-really-access-content-in-javascript-really">or do they</a>?</p>
+<p><img alt="wat" src="images/wat.jpg" /></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              10/26
+            </aside>
+            <img class="logo" src="theme/img/yycjs-logo.png">
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Pre-rendering</h2></header>
+            
+            
+            <section><p>Pre-render server side.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              11/26
+            </aside>
+            <img class="logo" src="theme/img/yycjs-logo.png">
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Hybrid Solutions</h2></header>
+            
+            
+            <section><p>Having some content static and some content dynamic.</p>
+<p>Utilizing <code>&lt;noscript&gt;</code> tags.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              12/26
+            </aside>
+            <img class="logo" src="theme/img/yycjs-logo.png">
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Separate robots site</h2></header>
+            
+            
+            <section><p>Generate a completely separate site just for robots.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              13/26
+            </aside>
+            <img class="logo" src="theme/img/yycjs-logo.png">
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Snapshotting</h2></header>
+            
+            
+            <section><p>Render out site in HTML using Phantom for specific URL params and/or user agent.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              14/26
+            </aside>
+            <img class="logo" src="theme/img/yycjs-logo.png">
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>i18n</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              15/26
+            </aside>
+            <img class="logo" src="theme/img/yycjs-logo.png">
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Why do I care?</h2></header>
+            
+            
+            <section><p>I'm not big and global so...</p>
+<p><img alt="Beaker" src="images/beaker-dont-give-a-fuck.jpg" /></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              16/26
+            </aside>
+            <img class="logo" src="theme/img/yycjs-logo.png">
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Maybe you should give at least one</h2></header>
+            
+            
+            <section><p><img src="images/world-top-languages.png" alt="Top Languages" style="width: 660px;"></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              17/26
+            </aside>
+            <img class="logo" src="theme/img/yycjs-logo.png">
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Services</h2></header>
+            
+            
+            <section><ul>
+<li>Translation companies</li>
+<li>Your amazing multi-lingual team</li>
+<li>Google translate</li>
+<li><a href="http://www.shopify.ca/blog/3027032-crowdsourcing-internationalization#axzz2fyZd1aiW">Crowd sourcing</a></li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              18/26
+            </aside>
+            <img class="logo" src="theme/img/yycjs-logo.png">
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Tips</h2></header>
+            
+            
+            <section><ul>
+<li>Set your <code>lang</code> attribute</li>
+<li>Prevent robots from crawling your site in multiple languages</li>
+<li>Use internationalized domain names (IDN)</li>
+<li></li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              19/26
+            </aside>
+            <img class="logo" src="theme/img/yycjs-logo.png">
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>i18n URLs</h2></header>
+            
+            
+            <section><ul>
+<li><code>site.com?loc=de</code> - Nope</li>
+<li><code>example.com/de/</code> - Good</li>
+<li><code>de.example.com</code> - Better</li>
+<li><code>example.ie</code> - Best</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              20/26
+            </aside>
+            <img class="logo" src="theme/img/yycjs-logo.png">
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Client Side Tools</h2></header>
+            
+            
+            <section><ul>
+<li><a href="http://slexaxton.github.io/Jed/">Jed</a></li>
+<li><a href="http://i18next.com/">i18next</a></li>
+<li><a href="https://github.com/jquery/globalize">Globalize</a></li>
+<li><a href="http://momentjs.com/">moment</a></li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              21/26
+            </aside>
+            <img class="logo" src="theme/img/yycjs-logo.png">
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Jed</h2></header>
+            
+            
+            <section><p><img alt="Jed" src="images/jedhead.png" /></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              22/26
+            </aside>
+            <img class="logo" src="theme/img/yycjs-logo.png">
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>jQuery Globalize</h2></header>
+            
+            
+            <section><p>Dave</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              23/26
+            </aside>
+            <img class="logo" src="theme/img/yycjs-logo.png">
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Server Side Tools</h2></header>
+            
+            
+            <section><ul>
+<li><a href="http://slexaxton.github.io/Jed/">Jed</a></li>
+<li><a href="https://github.com/mozilla/i18n-abide">i18n-abide</a></li>
+<li><a href="https://github.com/jamuhl/i18next-node">i18next-node</a></li>
+<li><a href="https://github.com/jeresig/i18n-node-2">i18n-2</a></li>
+<li><a href="https://github.com/mashpie/i18n-node">i18n-node</a></li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              24/26
+            </aside>
+            <img class="logo" src="theme/img/yycjs-logo.png">
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>i18n-whatever for NodeJS</h2></header>
+            
+            
+            <section><p>Eric</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              25/26
+            </aside>
+            <img class="logo" src="theme/img/yycjs-logo.png">
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2><a href="http://www.meetup.com/YYC-js/events/131079442/">Next Month</a></h2></header>
+            
+            
+            <section><ul>
+<li>Why are most mobile web apps slow?</li>
+<li>Good mobile tools<ul>
+<li>Bootstrap 3</li>
+<li>Ratchet</li>
+<li>Topcoat</li>
+<li>Zepto/custom lodash</li>
+</ul>
+</li>
+<li>Mobile web pro-tips</li>
+<li>Building a simple snappy mobile app</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              26/26
+            </aside>
+            <img class="logo" src="theme/img/yycjs-logo.png">
+          </footer>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div id="toc" class="sidebar hidden">
+    <h2>Table of Contents</h2>
+    <table>
+      <caption>Table of Contents</caption>
+      
+      <tr id="toc-row-1">
+        <th><a href="#slide1">SEO &amp; i18n</a></th>
+        <td><a href="#slide1">1</a></td>
+      </tr>
+      
+        
+        <tr id="toc-row-2" class="sub">
+          <th><a href="#slide2">Our Presenters</a></th>
+          <td><a href="#slide2">2</a></td>
+        </tr>
+        
+        <tr id="toc-row-3" class="sub">
+          <th><a href="#slide3">Our Sponsors</a></th>
+          <td><a href="#slide3">3</a></td>
+        </tr>
+        
+        <tr id="toc-row-4" class="sub">
+          <th><a href="#slide4">Our Sponsors</a></th>
+          <td><a href="#slide4">4</a></td>
+        </tr>
+        
+        <tr id="toc-row-5" class="sub">
+          <th><a href="#slide5">Last Month</a></th>
+          <td><a href="#slide5">5</a></td>
+        </tr>
+        
+      
+      
+      <tr id="toc-row-6">
+        <th><a href="#slide6">SEO</a></th>
+        <td><a href="#slide6">6</a></td>
+      </tr>
+      
+        
+        <tr id="toc-row-7" class="sub">
+          <th><a href="#slide7">Search Engine Optimzation</a></th>
+          <td><a href="#slide7">7</a></td>
+        </tr>
+        
+        <tr id="toc-row-8" class="sub">
+          <th><a href="#slide8">Different Strokes</a></th>
+          <td><a href="#slide8">8</a></td>
+        </tr>
+        
+        <tr id="toc-row-9" class="sub">
+          <th><a href="#slide9">Typical SEO Protips</a></th>
+          <td><a href="#slide9">9</a></td>
+        </tr>
+        
+        <tr id="toc-row-10" class="sub">
+          <th><a href="#slide10">Great. What about JS apps?</a></th>
+          <td><a href="#slide10">10</a></td>
+        </tr>
+        
+        <tr id="toc-row-11" class="sub">
+          <th><a href="#slide11">Pre-rendering</a></th>
+          <td><a href="#slide11">11</a></td>
+        </tr>
+        
+        <tr id="toc-row-12" class="sub">
+          <th><a href="#slide12">Hybrid Solutions</a></th>
+          <td><a href="#slide12">12</a></td>
+        </tr>
+        
+        <tr id="toc-row-13" class="sub">
+          <th><a href="#slide13">Separate robots site</a></th>
+          <td><a href="#slide13">13</a></td>
+        </tr>
+        
+        <tr id="toc-row-14" class="sub">
+          <th><a href="#slide14">Snapshotting</a></th>
+          <td><a href="#slide14">14</a></td>
+        </tr>
+        
+      
+      
+      <tr id="toc-row-15">
+        <th><a href="#slide15">i18n</a></th>
+        <td><a href="#slide15">15</a></td>
+      </tr>
+      
+        
+        <tr id="toc-row-16" class="sub">
+          <th><a href="#slide16">Why do I care?</a></th>
+          <td><a href="#slide16">16</a></td>
+        </tr>
+        
+        <tr id="toc-row-17" class="sub">
+          <th><a href="#slide17">Maybe you should give at least one</a></th>
+          <td><a href="#slide17">17</a></td>
+        </tr>
+        
+        <tr id="toc-row-18" class="sub">
+          <th><a href="#slide18">Services</a></th>
+          <td><a href="#slide18">18</a></td>
+        </tr>
+        
+        <tr id="toc-row-19" class="sub">
+          <th><a href="#slide19">Tips</a></th>
+          <td><a href="#slide19">19</a></td>
+        </tr>
+        
+        <tr id="toc-row-20" class="sub">
+          <th><a href="#slide20">i18n URLs</a></th>
+          <td><a href="#slide20">20</a></td>
+        </tr>
+        
+        <tr id="toc-row-21" class="sub">
+          <th><a href="#slide21">Client Side Tools</a></th>
+          <td><a href="#slide21">21</a></td>
+        </tr>
+        
+        <tr id="toc-row-22" class="sub">
+          <th><a href="#slide22">Jed</a></th>
+          <td><a href="#slide22">22</a></td>
+        </tr>
+        
+        <tr id="toc-row-23" class="sub">
+          <th><a href="#slide23">jQuery Globalize</a></th>
+          <td><a href="#slide23">23</a></td>
+        </tr>
+        
+        <tr id="toc-row-24" class="sub">
+          <th><a href="#slide24">Server Side Tools</a></th>
+          <td><a href="#slide24">24</a></td>
+        </tr>
+        
+        <tr id="toc-row-25" class="sub">
+          <th><a href="#slide25">i18n-whatever for NodeJS</a></th>
+          <td><a href="#slide25">25</a></td>
+        </tr>
+        
+        <tr id="toc-row-26" class="sub">
+          <th><a href="#slide26"><a href="http://www.meetup.com/YYC-js/events/131079442/">Next Month</a></a></th>
+          <td><a href="#slide26">26</a></td>
+        </tr>
+        
+      
+      
+    </table>
+  </div>
+  
+  <div id="help" class="sidebar hidden">
+    <h2>Help</h2>
+    <table>
+      <caption>Help</caption>
+      <tr>
+        <th>Table of Contents</th>
+        <td>t</td>
+      </tr>
+      <tr>
+        <th>Exposé</th>
+        <td>ESC</td>
+      </tr>
+      <tr>
+        <th>Full screen slides</th>
+        <td>e</td>
+      </tr>
+      <tr>
+        <th>Presenter View</th>
+        <td>p</td>
+      </tr>
+      <tr>
+        <th>Source Files</th>
+        <td>s</td>
+      </tr>
+      <tr>
+        <th>Slide Numbers</th>
+        <td>n</td>
+      </tr>
+      <tr>
+        <th>Toggle screen blanking</th>
+        <td>b</td>
+      </tr>
+      <tr>
+        <th>Show/hide slide context</th>
+        <td>c</td>
+      </tr>
+      <tr>
+        <th>Notes</th>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th>Help</th>
+        <td>h</td>
+      </tr>
+    </table>
+  </div>
+  <script>main()</script>
+</body>
+</html>
