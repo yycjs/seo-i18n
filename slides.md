@@ -84,6 +84,15 @@ It's constantly evolving!
 
 ---
 
+## Google Hummingbird Algorithm
+
+* Natural Language
+* Big Overhaul
+
+![Hummingbird](images/google-hummingbird.jpg)
+
+---
+
 ## Great. What about JS apps?
 
 Crawlers don't do JS... [or do they](http://moz.com/ugc/can-google-really-access-content-in-javascript-really)?
@@ -96,6 +105,8 @@ Crawlers don't do JS... [or do they](http://moz.com/ugc/can-google-really-access
 
 Pre-render server side.
 
+![](images/pre-render.jpg)
+
 ---
 
 ## Hybrid Solutions
@@ -104,17 +115,23 @@ Having some content static and some content dynamic.
 
 Utilizing `<noscript>` tags.
 
+![](images/hybrid.jpg)
+
 ---
 
 ## Separate robots site
 
 Generate a completely separate site just for robots.
 
+![](images/separate-site.jpg)
+
 ---
 
 ## Snapshotting
 
 Render out site in HTML using Phantom for specific URL params and/or user agent.
+
+![](images/snapshotting.jpg)
 
 ---
 
@@ -145,12 +162,11 @@ I'm not big and global so...
 
 ---
 
-## Tips
+## i18n Domain Tips
 
 - Set your `lang` attribute
 - Prevent robots from crawling your site in multiple languages
 - Use internationalized domain names (IDN)
-- 
 
 ---
 
@@ -174,13 +190,32 @@ I'm not big and global so...
 
 ## Jed
 
-![Jed](images/jedhead.png)
+![Jed](images/jedhead.jpg)
 
 ---
 
-## jQuery Globalize
+## Jed for AMD
 
-Dave
+    !javascript
+    require(['jed'], function ( Jed ) {
+      var i18n = new Jed({
+        // Generally output by a .po file conversion
+        locale_data : {
+          "messages" : {
+            "" : {
+              "domain" : "messages",
+              "lang"   : "en",
+              "plural_forms" : "nplurals=2; plural=(n != 1);"
+            },
+            "some key" : [ null, "some value"]
+          }
+        },
+        "domain" : "messages"
+      });
+
+      alert( i18n.gettext( "some key" ) ); // alerts "some value"
+    });
+
 
 ---
 
@@ -191,12 +226,37 @@ Dave
 - [i18next-node](https://github.com/jamuhl/i18next-node)
 - [i18n-2](https://github.com/jeresig/i18n-node-2)
 - [i18n-node](https://github.com/mashpie/i18n-node)
+- [node-polyglot](https://github.com/airbnb/polyglot.js)
 
 ---
 
-## i18n-whatever for NodeJS
+## Jed for NodeJS
 
-Eric
+    !javascript
+      var Jed = require('Jed');
+      var i18n = new Jed({
+        // Generally output by a .po file conversion
+        locale_data : {
+          "messages" : {
+            "" : {
+              "domain" : "messages",
+              "lang"   : "en",
+              "plural_forms" : "nplurals=2; plural=(n != 1);"
+            },
+            "some key" : [ null, "some value"]
+          }
+        },
+        "domain" : "messages"
+      });
+
+      console.log( i18n.gettext( "some key" ) ); // logs "some value"
+    });
+
+---
+
+## FeathersJS
+
+<img src="images/feathers-large.png" alt="Feathers" style="margin-top: 100px;">
 
 ---
 
